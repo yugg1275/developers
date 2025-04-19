@@ -1,0 +1,342 @@
+<!-- main Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My E-Commerce Store</title>
+    <!-- <script>
+        const isLoggedIn = sessionStorage.getItem("loggedIn");
+        if (!isLoggedIn) {
+          window.location.href = "i.html";
+        }
+      </script> -->
+    <style>
+
+*{
+    text-transform: capitalize;
+    text-decoration: none;
+}
+.special-bg {
+    margin-top: 10PX;
+  background-image: url('https://t3.ftcdn.net/jpg/10/82/53/50/360_F_1082535075_jSNDcpDWYOBfA8DD4o9nVF27T8zH7feY.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 400px; 
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.special-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); 
+}
+
+.special-bg .content {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  max-width: 90%;
+}
+
+.special-bg h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.special-bg p {
+  font-size: 1.5rem;
+}  
+body {
+    margin:0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 40px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    width: 100%;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+   
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 60px;
+    justify-content: space-around;
+    font-size: 30px;
+}
+nav a:hover{
+    color: blue;
+    
+}
+main {
+    padding: 40px;
+}
+
+.products {
+    margin-top:50px;
+    margin-left:100px;
+    margin-right:100px;
+    display: grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap: 50px;
+    height:100%;
+    margin-bottom: 50px;
+}
+
+.product-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    height:400px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,1.2);
+}
+.product-card:hover{
+    transform: scale(1.1);
+}
+
+.product-card img {
+    max-width: 100%;
+    height:250px;
+    border-radius: 4px;
+}
+
+.product-card h2 {
+    margin: 15px 0 10px;
+}
+
+.product-card p {
+    font-size: 18px;
+    color: #444;
+    font-weight: bold;
+}
+
+.product-card button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #28a745;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+    
+@media (max-width: 400px) {
+  .special-bg h2 {
+    font-size: 2rem;
+  }
+
+  .special-bg p {
+    font-size: 1.1rem;
+  }
+}
+.site-footer {
+  background-color: #111;
+  color: #fff;
+  padding: 40px 20px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-about,
+.footer-links,
+.footer-social {
+  flex: 1 1 250px;
+  margin: 20px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #444;
+  padding-top: 20px;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-about, .footer-links {
+    margin: 10px 0;
+  }
+}
+h1{
+    animation:harish 4s ease-in-out infinite normal;
+  
+}
+@keyframes harish{
+    0%{
+        color: white;
+     
+    }
+    25%{
+        color: blue;
+      
+    }
+    50%{
+        color: cadetblue;
+    }
+    100%{
+        color:rgb(172, 176, 198);
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="font-size: 50px;">smart store !!</h1>
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Cart</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+      <section class="special-bg">
+        <div class="content">
+          <h2>Special Offer</h2>
+          <p>Grab your deal before it's gone!</p>
+        </div>
+      </section>
+    <section class="products">
+        <a href="i2.html">
+        <div class="product-card">
+            <img src="image1.jpg" alt="Product 1">
+            <h2>Pantaloon</h2>
+            <p>₹450</p>
+            <button>Add to Cart</button>
+        </div>
+    </a>
+         <a href="i3.html">
+        <div class="product-card">
+            <img src="image2.jpg" alt="Product 2">
+            <h2>Denim</h2>
+            <p>₹400</p>
+            <button>Add to Cart</button>
+        </div>
+             </a>
+              <a href="i4.html">
+        <div class="product-card">
+            <img src="image3.jpg" alt="Product 3">
+            <h2>Zara</h2>
+            <p>₹700</p>
+            <button>Add to Cart</button>
+        </div>
+                  </a>
+    </section>
+     <section class="products">
+          <a href="i5.html">
+          <div class="product-card">
+            <img src="image4.jpg" alt="product 4">
+            <h2>Adidas</h2>
+            <p>₹999.00</p>
+            <button>Add to Cart</button>
+        </div>
+              </a>
+               <a href="i6.html">
+         <div class="product-card">
+            <img src="image5.jpg" alt="product 5">
+            <h2>Nike</h2>
+            <p>₹1099.00</p>
+            <button>Add to Cart</button>
+        </div>
+                   </a>
+                    <a href="i7.html">
+         <div class="product-card">
+            <img src="image6.jpg" alt="product 6">
+            <h2>Puma</h2>
+            <p>₹1399</p>
+            <button>Add to Cart</button>
+        </div>
+        </a>
+    </section>
+    <footer>
+        <!-- <p>&copy; 2025 My E-Commerce Store. All rights reserved.</p> -->
+        <footer class="site-footer">
+            <div class="footer-container">
+              <div class="footer-about">
+                <h3>YourBrand</h3>
+                <p>We bring you the best products at the best prices.</p>
+              </div>
+          
+              <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+          
+            <div class="footer-bottom">
+              <p>&copy; 2025 YourBrand. All rights reserved.</p>
+            </div>
+          </footer>
+    </footer>
+
+</body>
+</html>
